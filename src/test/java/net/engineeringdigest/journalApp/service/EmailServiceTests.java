@@ -1,0 +1,19 @@
+package net.engineeringdigest.journalApp.service;
+
+import net.engineeringdigest.journalApp.Repository.EmailService;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class EmailServiceTests {
+
+    @Autowired
+    private EmailService emailService;
+
+    @Test
+    void testSendEmail() {
+        emailService.sendMail("dineshsonawane615@gmail.com",
+                "Testing Java mail sender","Hi, app kaise hain ?");
+    }
+}
